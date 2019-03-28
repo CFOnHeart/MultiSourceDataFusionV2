@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="468.0" prefWidth="794.0" style="-fx-background-color: #B3DFA8;" visible="true" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.iip.ui.entrance.controller.SelectWindowsController">
+  <children>
+    <Button layoutX="274.0" layoutY="139.0" mnemonicParsing="false" onAction="#changeWindow0" prefHeight="42.0" prefWidth="246.0" style="-fx-background-color: #37BC9B;" text="多级语义提取" textFill="WHITE">
+      <font>
+        <Font size="15.0" fx:id="x1" />
+      </font>
+    </Button>
+    <Label layoutX="36.0" layoutY="28.0" prefHeight="53.0" prefWidth="462.0" text="跨时空异构数据的结构化描述和语义协同">
+      <font>
+        <Font size="25.0" />
+      </font>
+    </Label>
+    <Button font="$x1" layoutX="274.0" layoutY="231.0" mnemonicParsing="false" onAction="#changeWindow1" prefHeight="42.0" prefWidth="246.0" style="-fx-background-color: #37BC9B;" text="命名实体识别" textFill="WHITE" />
+    <Button font="$x1" layoutX="274.0" layoutY="319.0" mnemonicParsing="false" onAction="#changeWindow2" prefHeight="41.000099999997474" prefWidth="246.0" style="-fx-background-color: #37BC9B;" text="跨时空特性" textFill="WHITE" />
+    <Separator disable="false" focusTraversable="false" layoutX="36.0" layoutY="75.0" opacity="1.0" prefHeight="5.0" prefWidth="448.0" visible="true" />
+  </children>
+</AnchorPane>

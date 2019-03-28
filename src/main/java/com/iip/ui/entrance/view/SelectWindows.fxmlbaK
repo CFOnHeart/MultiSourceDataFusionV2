@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="305.0" prefWidth="495.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.iip.ui.entrance.controller.SelectWindowsController">
+  <children>
+    <Button layoutX="159.0" layoutY="81.0" mnemonicParsing="false" onAction="#changeWindow0" prefHeight="29.0" prefWidth="176.0" text="多级语义提取" />
+    <Label layoutX="26.0" layoutY="28.0" prefHeight="53.0" prefWidth="200.0" text="跨时空多源异构数据..." />
+    <Button layoutX="160.0" layoutY="138.0" mnemonicParsing="false" onAction="#changeWindow1" prefHeight="29.0" prefWidth="176.0" text="命名实体识别" />
+    <Button layoutX="159.0" layoutY="199.0" mnemonicParsing="false" onAction="#changeWindow2" prefHeight="29.0" prefWidth="176.0" text="跨时空特性" />
+  </children>
+</AnchorPane>

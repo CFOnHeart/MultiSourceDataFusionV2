@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="feMainViewPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: white;" stylesheets="@stylesheet/MainView.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.iip.ui.feature_extraction.controller.MainController">
+  <left>
+    <AnchorPane prefHeight="720.0" prefWidth="203.0" styleClass="title-color" BorderPane.alignment="CENTER">
+      <children>
+        <AnchorPane fx:id="feStep1" onMouseClicked="#menuButtonClicked" prefHeight="60.0" prefWidth="60.0" stylesheets="@stylesheet/MainView.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+          <children>
+            <ImageView fitHeight="30.0" fitWidth="30.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0">
+              <image>
+                <Image url="@picture/connectionConfigMenuButton.png" />
+              </image>
+            </ImageView>
+            <Label layoutX="66.0" layoutY="17.0" mouseTransparent="true" prefWidth="100.0" text="分词">
+                     <font>
+                  <Font size="20.0" fx:id="x1" />
+                     </font></Label>
+          </children>
+        </AnchorPane>
+        <AnchorPane fx:id="feStep2" onMouseClicked="#menuButtonClicked" prefHeight="60.0" prefWidth="60.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0">
+          <children>
+            <ImageView fitHeight="30.0" fitWidth="30.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0">
+              <image>
+                <Image url="@picture/infoMenuButton.png" />
+              </image>
+            </ImageView>
+            <Label fx:id="keyword" font="$x1" layoutX="66.0" layoutY="17.0" mouseTransparent="true" prefWidth="100.0" text="关键词" />
+          </children>
+        </AnchorPane>
+        <AnchorPane fx:id="feStep3" layoutX="0.0" layoutY="120.0" onMouseClicked="#menuButtonClicked" prefHeight="60.0" prefWidth="203.0">
+          <children>
+            <ImageView fitHeight="30.0" fitWidth="30.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0">
+              <image>
+                <Image url="@picture/SearchKeyword.png" />
+              </image>
+            </ImageView>
+            <Label fx:id="vectorize" font="$x1" layoutX="66.0" layoutY="17.0" mouseTransparent="true" prefWidth="100.0" text="向量化" />
+          </children>
+        </AnchorPane>
+        <AnchorPane fx:id="feStep4" layoutY="180.0" onMouseClicked="#menuButtonClicked" prefHeight="60.0" prefWidth="203.0">
+          <children>
+            <ImageView fitHeight="30.0" fitWidth="30.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0">
+              <image>
+                <Image url="@picture/testsummary.png" />
+              </image>
+            </ImageView>
+            <Label fx:id="summary" font="$x1" layoutX="66.0" layoutY="17.0" mouseTransparent="true" prefWidth="100.0" text="文本摘要" />
+          </children>
+        </AnchorPane>
+        <AnchorPane fx:id="feStep5" onMouseClicked="#menuButtonClicked" prefHeight="60.0" prefWidth="60.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+          <children>
+            <ImageView fitHeight="30.0" fitWidth="30.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0">
+              <image>
+                <Image url="@picture/settingsMenuButton.png" />
+              </image>
+            </ImageView>
+            <Label font="$x1" layoutX="66.0" layoutY="17.0" mouseTransparent="true" prefWidth="100.0" text="配置" />
+          </children>
+        </AnchorPane>
+      </children>
+    </AnchorPane>
+  </left>
+  <top>
+    <AnchorPane prefHeight="80.0" prefWidth="1200.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+      <children>
+        <AnchorPane prefHeight="80.0" prefWidth="203.0" style="-fx-background-color: #37BC9B;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+          <children>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0">
+              <image>
+                <Image url="@picture/icon.png" />
+              </image>
+            </ImageView>
+          </children>
+        </AnchorPane>
+        <Label alignment="TOP_LEFT" layoutX="66.0" layoutY="20.0" prefWidth="150.0" text="多级语义提取工具" />
+        <Label fx:id="feMainTitle" layoutX="226.0" layoutY="13.0" prefHeight="53.0" prefWidth="266.0" styleClass="title-font" stylesheets="@stylesheet/MainView.css" text="多级语义提取工具" textFill="#37bc9b">
+          <!--  AnchorPane.leftAnchor="75.0" -->
+          <font>
+            <Font name="System Bold" size="32.0" />
+          </font>
+        </Label>
+        <AnchorPane onMouseClicked="#exit" prefHeight="60.0" prefWidth="60.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+          <children>
+            <ImageView fitHeight="30.0" fitWidth="30.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0">
+              <image>
+                <Image url="@picture/exitButton.png" />
+              </image>
+            </ImageView>
+          </children>
+        </AnchorPane>
+        <Separator layoutX="206.0" layoutY="80.0" minHeight="0.0" prefHeight="0.0" prefWidth="980.0" />
+      </children>
+    </AnchorPane>
+  </top>
+</BorderPane>
