@@ -102,15 +102,15 @@ import java.util.ResourceBundle;
             if (currentMenuPane == selectedMenuPane) return;
 
             if (currentMenuPane != null){
-                currentMenuPane.getStylesheets().clear();
-                currentMenuPane.getStylesheets().add("menuButton");
+                currentMenuPane.getStyleClass().clear();
+                currentMenuPane.getStyleClass().add("menuButton");
             }
 
             // 去判断鼠标是否点击在对应的Pane上
             for (com.iip.ui.ner.controller.MenuModule menuModule: menuModules){
                 if (menuModule.getPane() == selectedMenuPane){
-                    menuModule.getPane().getStylesheets().clear();
-                    menuModule.getPane().getStylesheets().add("menuButtonSelected");
+                    menuModule.getPane().getStyleClass().clear();
+                    menuModule.getPane().getStyleClass().add("menuButtonSelected");
                     LblMainTitle.setText(menuModule.getText());
                     try {
                         FXMLLoader loader = new FXMLLoader();

@@ -3,8 +3,7 @@ package com.iip.ui.space_time.controller;
 import com.iip.data.entity.SingleDocEntity;
 import com.iip.data.participle.SingleDocParticiple;
 import com.iip.data.space_time.SpaceTimeData;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
+
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ListView;
@@ -19,6 +18,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
+import static com.iip.ui.ner.MainNer.show_dialog;
+
 /**
  * @Author Junnor.G
  * @Date 2018/12/5 下午7:56
@@ -29,6 +30,7 @@ public class LoadDataViewController extends RootController implements Initializa
     @FXML
     private ListView<String> LVHandledDataListView;
 
+    private List<String> datalist = new ArrayList<>();
 
     @FXML
     private void loadDataByFileClicked(MouseEvent mouseEvent){
@@ -66,7 +68,15 @@ public class LoadDataViewController extends RootController implements Initializa
     }
     @FXML
     private void loadDataByMysqlClicked(MouseEvent mouseEvent){
-        // todo
+        if (!DatabaseHelperJ.hasSet) {
+            show_dialog("请先在设置中填写相关数据库设置");
+            return;
+        } else {
+            datalist = DatabaseHelperJ.read(DatabaseHelperJ.originalDataTables[0], "*");
+            SpaceTimeData.rawDataList.clear();
+            SpaceTimeData.rawDataList.addAll(datalist);
+            LVRawDataListView.setItems(SpaceTimeData.rawDataList);
+        }
     }
     @FXML
     private void replaceDataClicked(MouseEvent mouseEvent){
