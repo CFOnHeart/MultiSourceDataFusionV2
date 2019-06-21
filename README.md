@@ -146,6 +146,10 @@ public class Login extends Application {
 }
 ```
 
+### 运行依赖
+
+1. 词向量文件'zhwiki_2017_03.sg_50d.word2vec'需放在'com/iip/ui/feature_extraction/resources/'文件夹下
+
 
 
 ### Reference
