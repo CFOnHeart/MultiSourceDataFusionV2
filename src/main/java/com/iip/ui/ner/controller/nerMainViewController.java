@@ -64,6 +64,8 @@ import java.util.ResourceBundle;
         @FXML
         private AnchorPane APTimeNer;
         @FXML
+        private AnchorPane APEntitySimilarity;
+        @FXML
         private AnchorPane APSetting;
         @FXML
         private BorderPane BPMainViewPane;
@@ -159,6 +161,8 @@ import java.util.ResourceBundle;
             menuModules.add(new com.iip.ui.ner.controller.MenuModule(APOrganizationNer, "../view/OrganizationNerView.fxml", "机构名识别", "OrganizationNerViewController"));
             // 时间识别
             menuModules.add(new com.iip.ui.ner.controller.MenuModule(APTimeNer, "../view/TimeNerView.fxml", "时间识别", "TimeNerViewController"));
+            // 实体相似度
+            menuModules.add(new com.iip.ui.ner.controller.MenuModule(APEntitySimilarity, "../view/EntitySimilarityView.fxml", "实体相似度", "EntitySimilarityController"));
             // 设置界面
             menuModules.add(new com.iip.ui.ner.controller.MenuModule(APSetting, "../view/ConfigView.fxml", "设置", "ConfigController"));
         }
